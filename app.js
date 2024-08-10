@@ -64,7 +64,7 @@ bot.on('message', (msg) => {
         {
           text: "Play Now !!",
           web_app: {
-            url: "https://ton-flip-coin.vercel.app/"
+            url: "https://t.me/ryan_hsu_test_bot/myapp"
           }
         }
       ]
