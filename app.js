@@ -63,9 +63,10 @@ bot.on('message', (msg) => {
       [
         {
           text: "Play Now !!",
-          web_app: {
-            url: "https://t.me/ryan_hsu_test_bot/myapp"
-          }
+          url: "https://t.me/ryan_hsu_test_bot/myapp"
+          // web_app: {
+          //   url: "https://t.me/ryan_hsu_test_bot/myapp"
+          // }
         }
       ]
     ];
