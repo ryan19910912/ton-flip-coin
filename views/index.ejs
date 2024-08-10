@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
-    <title>Flip Coin Cat</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1 style="color: red">Flip Coin Cat</h1>
-    <img src="https://turquoise-smiling-halibut-906.mypinata.cloud/ipfs/QmNtf5zbi6CuhVaGZcUf5NUTw8TXZKtU2nh5duxGhYigHM" width="100%%" height="100%"></img>
-    <div id="ton-connect"></div>
-    <div>
-      <button>Head</button>
-      <button>Tail</button>
-    </div>
 
-    <script>
-      const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-          manifestUrl: 'https://ton-flip-coin.vercel.app/tonconnect-manifest.json',
-          buttonRootId: 'ton-connect'
-      });
-    </script>
-  </body>
+<head>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+  <title>Flip Coin Cat</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1 style="color: red">Flip Coin Cat</h1>
+  <img src="https://turquoise-smiling-halibut-906.mypinata.cloud/ipfs/QmNtf5zbi6CuhVaGZcUf5NUTw8TXZKtU2nh5duxGhYigHM"
+    width="100%%" height="100%"></img>
+  <div id="ton-connect"></div>
+  <div>
+    <button>Head</button>
+    <button>Tail</button>
+  </div>
+
+  <script>
+    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+      manifestUrl: 'https://ton-flip-coin.vercel.app/tonconnect-manifest.json',
+      buttonRootId: 'ton-connect'
+    });
+    tonConnectUI.uiOptions = {
+      twaReturnUrl: 'https://t.me/ryan_hsu_test_bot/myapp'
+    };
+    async function connectToWallet() {
+      const connectedWallet = await tonConnectUI.connectWallet();
+      // Do something with connectedWallet if needed
+      console.log(connectedWallet);
+    }
+
+    // Call the function
+    connectToWallet().catch(error => {
+      console.error("Error connecting to wallet:", error);
+    });
+  </script>
+</body>
+
 </html>
