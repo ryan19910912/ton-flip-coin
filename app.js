@@ -64,7 +64,7 @@ bot.on('message', (msg) => {
         {
           text: "Play Now !!",
           web_app: {
-            url: "https://nodejs.org/zh-cn/learn/command-line/how-to-read-environment-variables-from-nodejs"
+            url: "https://ton-flip-coin.vercel.app/"
           }
         }
       ]
