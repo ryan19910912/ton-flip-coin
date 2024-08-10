@@ -8,34 +8,32 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
+<style>
+  .go3572451881 {
+    display: inline-flex !important;
+  }
+
+  .go3974562317 {
+    display: inline-flex !important;
+  }
+</style>
+
 <body>
-  <h1 style="color: red">Flip Coin Cat</h1>
   <img src="https://turquoise-smiling-halibut-906.mypinata.cloud/ipfs/QmNtf5zbi6CuhVaGZcUf5NUTw8TXZKtU2nh5duxGhYigHM"
     width="100%%" height="100%"></img>
-  <div id="ton-connect"></div>
-  <div>
-    <button><h1>Head</h1></button>
-    <button><h1>Tail</h1></button>
+  <div style="text-align: center;">
+    <h1 style="color: red">Flip Coin</h1>
+    <h3 style="color: rgb(21, 255, 0)">One game costs 0.01 Testnet Ton Coin</h3>
+    <div id="ton-connect"></div>
+    <div style="margin-top: 5%;">
+      <button style="margin-right: 5%; width: 100px;">
+        <h2>Head</h2>
+      </button>
+      <button style="margin-left: 5%; width: 100px;">
+        <h2>Tail</h2>
+      </button>
+    </div>
   </div>
-
-  <script>
-    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-      manifestUrl: 'https://ton-flip-coin.vercel.app/tonconnect-manifest.json',
-      buttonRootId: 'ton-connect'
-    });
-    tonConnectUI.uiOptions = {
-      twaReturnUrl: 'https://t.me/ryan_hsu_test_bot/myapp'
-    };
-    async function connectToWallet() {
-      const connectedWallet = await tonConnectUI.connectWallet();
-      // Do something with connectedWallet if needed
-      console.log(connectedWallet);
-    }
-
-    // Call the function
-    connectToWallet().catch(error => {
-      console.error("Error connecting to wallet:", error);
-    });
   </script>
 </body>
 
