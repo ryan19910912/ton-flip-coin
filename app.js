@@ -56,7 +56,7 @@ bot.on('message', (msg) => {
     let photoPath = "https://turquoise-smiling-halibut-906.mypinata.cloud/ipfs/QmNtf5zbi6CuhVaGZcUf5NUTw8TXZKtU2nh5duxGhYigHM";
     let options = new Object();
     let userName = msg.chat.first_name + (msg.chat.last_name == undefined ? "" : " " + msg.chat.last_name);
-    options.caption = `Hi ~ ${userName} \nFlip Coin Cat : All In !!!`;
+    options.caption = `Hi ~ ${userName} \nAll In La !!!`;
 
     let InlineKeyboardMarkup = new Object();
     InlineKeyboardMarkup.inline_keyboard = [
@@ -65,7 +65,7 @@ bot.on('message', (msg) => {
           text: "Play Now !!",
           url: "https://t.me/ryan_hsu_test_bot/myapp"
           // web_app: {
-          //   url: "https://t.me/ryan_hsu_test_bot/myapp"
+          //   url: "https://ton-flip-coin-vite.vercel.app/"
           // }
         }
       ]
